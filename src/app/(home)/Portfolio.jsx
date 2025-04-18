@@ -1,4 +1,6 @@
-"use client"
+"use client";
+
+import { motion } from "framer-motion";
 import { ThumbsUp } from "lucide-react";
 import { useState } from "react";
 
@@ -39,11 +41,20 @@ const tabs = ["All", "Mobile App", "Dashboard", "Website", "HTML/CSS"];
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("All");
+  const [likes, setLikes] = useState(
+    allProjects.map((project) => project.likes)
+  );
 
   const filteredProjects =
     activeTab === "All"
       ? allProjects
       : allProjects.filter((project) => project.category === activeTab);
+
+  const handleLike = (index) => {
+    const newLikes = [...likes];
+    newLikes[index]++;
+    setLikes(newLikes);
+  };
 
   return (
     <section className="bg-gray-50 text-center">
@@ -73,33 +84,50 @@ export default function Portfolio() {
         </div>
 
         {/* Grid Gallery */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500 ease-in-out">
-          {filteredProjects.map((project, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
-            >
-              <div className="relative">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute bottom-2 right-2 bg-white p-2 rounded-md shadow-sm">
-                  <ThumbsUp className="h-4 w-4 text-indigo-500" />
+        <motion.div
+          layout
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {filteredProjects.map((project, i) => {
+            const indexInAll = allProjects.findIndex(
+              (p) => p.title === project.title
+            );
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition"
+              >
+                <div className="relative group overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-300"
+                  />
+                  <button
+                    onClick={() => handleLike(indexInAll)}
+                    className="absolute bottom-2 right-2 bg-white p-2 rounded-md shadow-sm flex items-center gap-1 hover:scale-110 transition"
+                  >
+                    <ThumbsUp className="h-4 w-4 text-indigo-500" />
+                    <span className="text-xs text-gray-700">
+                      {likes[indexInAll]}
+                    </span>
+                  </button>
                 </div>
-              </div>
-              <div className="text-left p-4">
-                <p className="text-gray-500 text-xs mb-1">
-                  {project.category} • {project.likes} likes
-                </p>
-                <h4 className="font-semibold text-lg leading-tight">
-                  {project.title}
-                </h4>
-              </div>
-            </div>
-          ))}
-        </div>
+                <div className="text-left p-4">
+                  <p className="text-gray-500 text-xs mb-1">
+                    {project.category}
+                  </p>
+                  <h4 className="font-semibold text-lg leading-tight">
+                    {project.title}
+                  </h4>
+                </div>
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );

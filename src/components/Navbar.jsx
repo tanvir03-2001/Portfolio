@@ -12,7 +12,7 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <div className="w-6 h-6 bg-blue-500 rounded-full" />
-          <span className="text-xl font-bold text-gray-900">TANVIR<span className="font-normal text-xs ml-1">DEV</span></span>
+          <span className="text-xl font-bold text-gray-900">TA<span className="font-normal text-xs ml-0.5">DEV</span></span>
         </div>
 
         {/* Desktop Menu */}
