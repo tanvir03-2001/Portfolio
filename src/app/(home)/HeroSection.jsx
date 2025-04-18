@@ -1,8 +1,8 @@
-import { Play } from 'lucide-react';
+import { Play } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="bg-[#f5f6fa] py-16 md:py-24">
+    <section className="relative bg-[#f5f6fa] py-16 md:py-24">
       <div className="container mx-auto min-h-[55vh] px-4 flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Left content */}
         <div className="flex-1 text-center md:text-left">
@@ -13,11 +13,12 @@ export default function HeroSection() {
             </button>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-            I am Jone Dion <br />
-            A <span className="text-blue-600">UI/UX Designer</span>
+            I am Jone Dion <br />A{" "}
+            <span className="text-blue-600">UI/UX Designer</span>
           </h1>
           <p className="text-gray-500 mt-4 max-w-md mx-auto md:mx-0">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md font-medium">
@@ -43,16 +44,26 @@ export default function HeroSection() {
 
       {/* Optional social icons */}
       <div className="fixed bottom-10 left-6 flex flex-col gap-4 z-10">
-        <a href="#" className="bg-white p-2 rounded-full shadow hover:scale-105 transition">
+        <a
+          href="#"
+          className="bg-white p-2 rounded-full shadow hover:scale-105 transition"
+        >
           <img src="/icons/facebook.svg" alt="Facebook" className="w-5 h-5" />
         </a>
-        <a href="#" className="bg-white p-2 rounded-full shadow hover:scale-105 transition">
+        <a
+          href="#"
+          className="bg-white p-2 rounded-full shadow hover:scale-105 transition"
+        >
           <img src="/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
         </a>
-        <a href="#" className="bg-white p-2 rounded-full shadow hover:scale-105 transition">
+        <a
+          href="#"
+          className="bg-white p-2 rounded-full shadow hover:scale-105 transition"
+        >
           <img src="/icons/twitter.svg" alt="Twitter" className="w-5 h-5" />
         </a>
       </div>
+
     </section>
   );
 }
