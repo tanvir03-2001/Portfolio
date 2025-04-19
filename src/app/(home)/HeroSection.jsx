@@ -53,7 +53,6 @@ export default function HeroSection() {
             </motion.button>
           </div>
         </motion.div>
-
         {/* Right image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9, y: 40 }}
