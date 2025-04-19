@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion } from "framer-motion";
@@ -57,12 +58,12 @@ export default function Portfolio() {
   };
 
   return (
-    <section className="bg-gray-50 text-center">
-      <div className="container mx-auto py-12 px-6 md:px-16">
-        <h3 className="text-indigo-500 text-sm font-semibold uppercase tracking-wide mb-2">
+    <section className="bg-gray-50 text-center text-gray-800">
+      <div className="container mx-auto py-12 px-4 sm:px-6 md:px-16">
+        <h3 className="text-indigo-500 text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
           My Portfolio
         </h3>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-gray-900">
           Some Of My Works
         </h2>
 
@@ -72,7 +73,7 @@ export default function Portfolio() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-5 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
+              className={`px-4 sm:px-5 py-2 rounded-full text-sm font-medium border transition-all duration-200 ${
                 activeTab === tab
                   ? "bg-indigo-500 text-white shadow"
                   : "bg-white text-gray-700 hover:bg-gray-100"
@@ -117,10 +118,10 @@ export default function Portfolio() {
                   </button>
                 </div>
                 <div className="text-left p-4">
-                  <p className="text-gray-500 text-xs mb-1">
+                  <p className="text-gray-500 text-xs sm:text-sm mb-1">
                     {project.category}
                   </p>
-                  <h4 className="font-semibold text-lg leading-tight">
+                  <h4 className="font-semibold text-base sm:text-lg leading-tight text-gray-800">
                     {project.title}
                   </h4>
                 </div>

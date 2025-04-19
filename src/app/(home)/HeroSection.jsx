@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion } from "framer-motion";
@@ -27,13 +28,14 @@ export default function HeroSection() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-            I am Jone Dion <br />A{" "}
-            <span className="text-blue-600">UI/UX Designer</span>
+            I am Tanvir Ahmed <br />A{" "}
+            <span className="text-blue-600">Web Developer</span>
           </h1>
 
           <p className="text-gray-500 mt-4 max-w-md mx-auto md:mx-0">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout.
+            Creative Web Developer crafting sleek, responsive, and
+            high-performance websites with a passion for clean code and great
+            user experience.
           </p>
 
           <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -76,10 +78,10 @@ export default function HeroSection() {
             />
 
             {/* Card Container */}
-            <div className="relative z-10 bg-white border-[10px] border-white rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 group-hover:shadow-indigo-300">
+            <div className="relative z-10 bg-gradient-to-br from-white via-indigo-50 to-white border-[10px] border-white rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 group-hover:shadow-indigo-300">
               <img
                 src="https://i.ibb.co.com/8LCcL6tp/Whats-App-Image-2025-04-13-at-02-37-05-5a964161-removebg-1.png"
-                alt="Jone Dion"
+                alt="Tanvir Ahmed"
                 className="w-full object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-700 ease-in-out"
               />
             </div>
@@ -92,37 +94,13 @@ export default function HeroSection() {
               className="text-center mt-6"
             >
               <h3 className="text-xl font-semibold text-gray-800">
-                Jone Dion
+                Tanvir Ahmed
               </h3>
               <p className="text-sm text-gray-500">Creative Developer</p>
             </motion.div>
           </div>
         </motion.div>
       </div>
-
-      {/* Social Icons - Slide In */}
-      <motion.div
-        initial={{ opacity: 0, x: -40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.2, duration: 0.7 }}
-        className="fixed bottom-10 left-6 flex flex-col gap-4 z-10"
-      >
-        {[
-          { icon: "/icons/facebook.svg", label: "Facebook" },
-          { icon: "/icons/linkedin.svg", label: "LinkedIn" },
-          { icon: "/icons/twitter.svg", label: "Twitter" },
-        ].map(({ icon, label }, i) => (
-          <motion.a
-            key={i}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            href="#"
-            className="bg-white p-2 rounded-full shadow hover:scale-105 transition"
-          >
-            <img src={icon} alt={label} className="w-5 h-5" />
-          </motion.a>
-        ))}
-      </motion.div>
     </section>
   );
 }

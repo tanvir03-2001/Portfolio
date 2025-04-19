@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 
@@ -48,45 +49,38 @@ export default function AboutMeSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-indigo-600 font-semibold mb-2">ABOUT ME</p>
-          <h2 className="text-3xl font-bold mb-4">Let's Know About Me</h2>
-          <p className="text-gray-600 mb-6 max-w-md">
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
+          <p className="text-indigo-600 font-semibold mb-2 text-sm sm:text-base">ABOUT ME</p>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Let's Know About Me</h2>
+          <p className="text-gray-800 mb-6 max-w-md text-sm sm:text-base">
+            I'm a passionate web developer who builds interactive and scalable web applications with modern technologies. I love solving problems and bringing designs to life.
           </p>
 
-          {/* Progress Bars */}
-          <div className="space-y-4">
-            {/* UI/UX */}
-            <div>
-              <div className="flex justify-between font-semibold text-sm">
-                <span>UI/UX DESIGN</span>
-                <span>90%</span>
+          {/* Skills in 2-Column Layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              { label: "HTML", value: "95%" },
+              { label: "CSS", value: "90%" },
+              { label: "JavaScript", value: "85%" },
+              { label: "React.js", value: "80%" },
+              { label: "Node.js", value: "75%" },
+              { label: "Express.js", value: "70%" },
+              { label: "MongoDB", value: "70%" },
+            ].map((skill, index) => (
+              <div key={index}>
+                <div className="flex justify-between font-semibold text-xs sm:text-sm text-gray-800 mb-1">
+                  <span>{skill.label}</span>
+                  <span>{skill.value}</span>
+                </div>
+                <div className="w-full bg-gray-300 h-2 rounded">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: skill.value }}
+                    transition={{ duration: 1 }}
+                    className="bg-indigo-600 h-2 rounded"
+                  />
+                </div>
               </div>
-              <div className="w-full bg-gray-300 h-2 rounded">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "90%" }}
-                  transition={{ duration: 1 }}
-                  className="bg-indigo-600 h-2 rounded"
-                />
-              </div>
-            </div>
-
-            {/* Figma */}
-            <div>
-              <div className="flex justify-between font-semibold text-sm">
-                <span>FIGMA DESIGN</span>
-                <span>70%</span>
-              </div>
-              <div className="w-full bg-gray-300 h-2 rounded">
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{ width: "70%" }}
-                  transition={{ duration: 1 }}
-                  className="bg-indigo-600 h-2 rounded"
-                />
-              </div>
-            </div>
+            ))}
           </div>
 
           {/* Contact Buttons */}
@@ -94,15 +88,15 @@ export default function AboutMeSection() {
             <div className="flex items-center gap-2 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
               <PhoneCall className="text-indigo-600 w-5 h-5" />
               <div>
-                <p className="font-semibold text-sm">24/7 Call Me</p>
-                <p className="text-gray-500 text-xs">+880123456789</p>
+                <p className="font-semibold text-xs sm:text-sm text-gray-900">24/7 Call Me</p>
+                <p className="text-gray-600 text-[11px] sm:text-xs">+8801845238826</p>
               </div>
             </div>
             <div className="flex items-center gap-2 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
               <Mail className="text-indigo-600 w-5 h-5" />
               <div>
-                <p className="font-semibold text-sm">Mail Me</p>
-                <p className="text-gray-500 text-xs">example@gmail.com</p>
+                <p className="font-semibold text-xs sm:text-sm text-gray-900">Mail Me</p>
+                <p className="text-gray-600 text-[11px] sm:text-xs">tanvir03.2001@gmail.com</p>
               </div>
             </div>
           </div>
@@ -110,7 +104,7 @@ export default function AboutMeSection() {
           {/* View More Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="mt-6 bg-white text-indigo-600 px-5 py-2 rounded-md shadow hover:bg-indigo-50 transition"
+            className="mt-6 bg-white text-indigo-600 text-sm sm:text-base px-5 py-2 rounded-md shadow hover:bg-indigo-50 transition"
           >
             View More
           </motion.button>

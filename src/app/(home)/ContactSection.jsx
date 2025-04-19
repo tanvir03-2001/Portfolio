@@ -38,7 +38,8 @@ export default function ContactSection() {
             Get in Touch
           </h2>
           <p className="text-gray-500 mt-2 text-sm sm:text-base">
-            I’d love to hear from you! Fill out the form and I’ll get back to you shortly.
+            I’d love to hear from you! Fill out the form and I’ll get back to
+            you shortly.
           </p>
         </div>
 
@@ -115,25 +116,35 @@ export default function ContactSection() {
             className="bg-white shadow-xl rounded-2xl p-6 sm:p-8 space-y-8"
           >
             <div>
-              <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1">📞 Get Support</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1">
+                📞 Get Support
+              </h4>
               <p className="text-gray-600 text-sm mb-2">
-                Need to chat? Reach out anytime via Skype or call.
+                Need to chat? Reach out anytime via Whatsapp or call.
               </p>
-              <p className="text-sm font-medium text-gray-800">Phone: <span className="text-gray-600">01922222224</span></p>
-              <p className="text-sm font-medium text-gray-800">Phone: <span className="text-gray-600">01956565654</span></p>
+              <p className="text-sm font-medium text-gray-800">
+                Phone: <span className="text-gray-600">+8801797021366</span>
+              </p>
+              <p className="text-sm font-medium text-gray-800">
+                Phone: <span className="text-gray-600">+8801845238826</span>
+              </p>
             </div>
 
             <div>
-              <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1">📧 Email Me</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1">
+                📧 Email Me
+              </h4>
               <p className="text-gray-600 text-sm mb-2">
-                I respond to emails promptly. Reach out for collaborations or questions.
+                I respond to emails promptly. Reach out for collaborations or
+                questions.
               </p>
-              <p className="text-sm text-gray-800">admin@gmail.com</p>
-              <p className="text-sm text-gray-800">personal@gmail.com</p>
+              <p className="text-sm text-gray-800">tanvir03.2001@gmail.com</p>
             </div>
 
             <div>
-              <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1">💬 Live Chat</h4>
+              <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1">
+                💬 Live Chat
+              </h4>
               <p className="text-gray-600 text-sm mb-4">
                 Connect with me in real-time for faster answers.
               </p>

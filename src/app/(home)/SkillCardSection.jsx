@@ -1,38 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Brush,
-  LayoutDashboard,
-  Palette,
-  PenTool,
-  Sparkles,
-} from "lucide-react";
+import { Atom, Code2, Database, Server, Sparkles } from "lucide-react";
 
 const skills = [
   {
-    name: "Adobe Illustrator",
+    name: "Vanilla JavaScript",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content.",
-    icon: <PenTool className="w-10 h-10 text-orange-500" />,
+      "Strong foundation in core JavaScript concepts including DOM manipulation, ES6+, and asynchronous programming.",
+    icon: <Code2 className="w-10 h-10 text-yellow-500" />,
   },
   {
-    name: "Photoshop Expert",
+    name: "React.js",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content.",
-    icon: <Brush className="w-10 h-10 text-blue-500" />,
+      "Building fast, dynamic UIs with reusable components and modern hooks-based architecture.",
+    icon: <Atom className="w-10 h-10 text-blue-600" />,
   },
   {
-    name: "UI/UX With XD",
+    name: "Node.js",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content.",
-    icon: <LayoutDashboard className="w-10 h-10 text-purple-600" />,
+      "Creating scalable server-side applications and RESTful APIs using Express.js and Node’s event-driven architecture.",
+    icon: <Server className="w-10 h-10 text-green-600" />,
   },
   {
-    name: "UI/UX In Figma",
+    name: "MongoDB",
     description:
-      "It is a long established fact that a reader will be distracted by the readable content.",
-    icon: <Palette className="w-10 h-10 text-pink-500" />,
+      "Designing flexible, NoSQL database structures for high-performance and scalable applications.",
+    icon: <Database className="w-10 h-10 text-emerald-500" />,
   },
 ];
 
@@ -46,7 +40,7 @@ export default function SkillCardSection() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-gray-800"
         >
-          My Design & UI/UX Skills
+          What I Bring to the Code
         </motion.h2>
         <motion.p
           initial={{ opacity: 0 }}
@@ -54,8 +48,8 @@ export default function SkillCardSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
           className="mt-3 text-gray-500 max-w-xl mx-auto"
         >
-          A blend of creativity and functionality for beautiful, effective user
-          experiences.
+          From front-end frameworks to clean back-end logic — here are the tools
+          and technologies I use to craft modern web solutions.
         </motion.p>
       </div>
 
@@ -85,9 +79,7 @@ export default function SkillCardSection() {
             <h3 className="text-lg font-semibold text-gray-900">
               {skill.name}
             </h3>
-            <p className="mt-2 text-sm text-gray-500">
-              {skill.description}
-            </p>
+            <p className="mt-2 text-sm text-gray-500">{skill.description}</p>
 
             {/* Bottom border glow effect on hover */}
             <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-b-xl" />

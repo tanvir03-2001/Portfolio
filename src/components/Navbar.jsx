@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -12,35 +12,37 @@ export default function Navbar() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <div className="w-6 h-6 bg-blue-500 rounded-full" />
-          <span className="text-xl font-bold text-gray-900">TA<span className="font-normal text-xs ml-0.5">DEV</span></span>
+          <span className="text-xl sm:text-2xl font-bold text-gray-900">
+            TANVIR<span className="font-normal text-xs ml-1">DEV</span>
+          </span>
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6 items-center">
-          <a href="#" className="text-gray-700 hover:text-blue-500">Home</a>
-          <a href="#" className="text-gray-700 hover:text-blue-500">About</a>
-          <a href="#" className="text-gray-700 hover:text-blue-500">Service</a>
-          <a href="#" className="text-gray-700 hover:text-blue-500">Portfolio</a>
-          <a href="#" className="text-gray-700 hover:text-blue-500">Blog</a>
-          <a href="#" className="text-gray-700 hover:text-blue-500">Contact</a>
+        <div className="hidden md:flex space-x-6 items-center text-sm sm:text-base">
+          <a href="#" className="text-gray-800 hover:text-blue-500 transition">Home</a>
+          <a href="#" className="text-gray-800 hover:text-blue-500 transition">About</a>
+          <a href="#" className="text-gray-800 hover:text-blue-500 transition">Service</a>
+          <a href="#" className="text-gray-800 hover:text-blue-500 transition">Portfolio</a>
+          <a href="#" className="text-gray-800 hover:text-blue-500 transition">Blog</a>
+          <a href="#" className="text-gray-800 hover:text-blue-500 transition">Contact</a>
         </div>
 
         {/* Hire Me Button */}
         <div className="hidden md:block">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm sm:text-base transition">
             Hire Me
           </button>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle Menu">
+            {mobileMenuOpen ? <X className="w-6 h-6 text-gray-800" /> : <Menu className="w-6 h-6 text-gray-800" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu with Animation */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -50,14 +52,14 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden overflow-hidden px-4 pb-4"
           >
-            <div className="space-y-2">
-              <a href="#" className="block text-gray-700 hover:text-blue-500">Home</a>
-              <a href="#" className="block text-gray-700 hover:text-blue-500">About</a>
-              <a href="#" className="block text-gray-700 hover:text-blue-500">Service</a>
-              <a href="#" className="block text-gray-700 hover:text-blue-500">Portfolio</a>
-              <a href="#" className="block text-gray-700 hover:text-blue-500">Blog</a>
-              <a href="#" className="block text-gray-700 hover:text-blue-500">Contact</a>
-              <button className="w-full mt-2 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md">
+            <div className="space-y-2 text-sm sm:text-base">
+              <a href="#" className="block text-gray-800 hover:text-blue-500 transition">Home</a>
+              <a href="#" className="block text-gray-800 hover:text-blue-500 transition">About</a>
+              <a href="#" className="block text-gray-800 hover:text-blue-500 transition">Service</a>
+              <a href="#" className="block text-gray-800 hover:text-blue-500 transition">Portfolio</a>
+              <a href="#" className="block text-gray-800 hover:text-blue-500 transition">Blog</a>
+              <a href="#" className="block text-gray-800 hover:text-blue-500 transition">Contact</a>
+              <button className="w-full mt-2 bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-md transition">
                 Hire Me
               </button>
             </div>
