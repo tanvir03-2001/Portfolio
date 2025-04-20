@@ -21,7 +21,7 @@ export const metadata = {
     "Tailwind CSS",
     "JavaScript Developer",
     "Bangladesh Developer",
-    "Portfolio Website"
+    "Portfolio Website",
   ],
   authors: [{ name: "Tanvir Ahmed", url: "https://yourdomain.com" }],
   creator: "Tanvir Ahmed",
@@ -44,7 +44,6 @@ export const metadata = {
   },
 };
 
-
 export default function Home() {
   return (
     <div>
@@ -52,6 +51,7 @@ export default function Home() {
       <SkillCardSection />
       <SkillsMarquee />
       <AboutMeSection />
+      {/* <GitHubCard /> */}
       <Portfolio />
       <TestimonialSlider />
       <BlogSection />
