@@ -25,22 +25,22 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6 items-center text-sm sm:text-base">
-          <a href="#" className="text-gray-800 hover:text-blue-500 transition">
+          <a href="#home" className="text-gray-800 hover:text-blue-500 transition">
             Home
           </a>
-          <a href="#" className="text-gray-800 hover:text-blue-500 transition">
+          <a href="#about" className="text-gray-800 hover:text-blue-500 transition">
             About
           </a>
-          <a href="#" className="text-gray-800 hover:text-blue-500 transition">
-            Service
+          <a href="#skills" className="text-gray-800 hover:text-blue-500 transition">
+            Skills
           </a>
-          <a href="#" className="text-gray-800 hover:text-blue-500 transition">
+          <a href="#portfolio" className="text-gray-800 hover:text-blue-500 transition">
             Portfolio
           </a>
-          <a href="#" className="text-gray-800 hover:text-blue-500 transition">
+          <a href="#blog" className="text-gray-800 hover:text-blue-500 transition">
             Blog
           </a>
-          <a href="#" className="text-gray-800 hover:text-blue-500 transition">
+          <a href="#contact" className="text-gray-800 hover:text-blue-500 transition">
             Contact
           </a>
         </div>

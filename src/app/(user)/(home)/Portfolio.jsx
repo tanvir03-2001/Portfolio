@@ -73,7 +73,7 @@ export default function Portfolio() {
   };
 
   return (
-    <section className="bg-gray-50 text-center text-gray-800">
+    <section id="portfolio" className="bg-gray-50 text-center text-gray-800">
       <div className="container mx-auto py-12 px-4 sm:px-6 md:px-16">
         <h3 className="text-indigo-500 text-sm sm:text-base font-semibold uppercase tracking-wide mb-2">
           My Portfolio

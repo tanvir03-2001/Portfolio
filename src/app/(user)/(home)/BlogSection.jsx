@@ -43,7 +43,7 @@ const blogData = [
 
 export default function BlogSection() {
   return (
-    <section className="bg-gray-50 text-gray-800 py-16">
+    <section id="blog" className="bg-gray-50 text-gray-800 py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="flex justify-between items-center mb-10 flex-wrap gap-4">

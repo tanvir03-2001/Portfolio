@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-[#f5f6fa] py-16 md:py-24 overflow-hidden">
+    <section id="home" className="relative bg-[#f5f6fa] py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto min-h-[55vh] px-4 flex flex-col md:flex-row items-center justify-between gap-12">
         {/* Left content */}
         <motion.div

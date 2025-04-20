@@ -34,7 +34,7 @@ export default function SkillsMarquee() {
   }, []);
 
   return (
-    <div className="bg-white py-6 md:py-10 overflow-hidden">
+    <div id="skills" className="bg-white py-6 md:py-10 overflow-hidden">
       <div className="relative w-full">
         <div
           className="flex gap-8 md:gap-16 animate-none will-change-transform"

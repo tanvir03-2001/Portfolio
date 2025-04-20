@@ -7,7 +7,7 @@ import { Mail, PhoneCall } from "lucide-react";
 
 export default function AboutMeSection() {
   return (
-    <section className="bg-gray-100 py-20 px-4">
+    <section id="about" className="bg-gray-100 py-20 px-4">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left Image Section */}
         <motion.div
@@ -49,10 +49,16 @@ export default function AboutMeSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <p className="text-indigo-600 font-semibold mb-2 text-sm sm:text-base">ABOUT ME</p>
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">Let's Know About Me</h2>
+          <p className="text-indigo-600 font-semibold mb-2 text-sm sm:text-base">
+            ABOUT ME
+          </p>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900">
+            Let's Know About Me
+          </h2>
           <p className="text-gray-800 mb-6 max-w-md text-sm sm:text-base">
-            I'm a passionate web developer who builds interactive and scalable web applications with modern technologies. I love solving problems and bringing designs to life.
+            I'm a passionate web developer who builds interactive and scalable
+            web applications with modern technologies. I love solving problems
+            and bringing designs to life.
           </p>
 
           {/* Skills in 2-Column Layout */}
@@ -85,19 +91,37 @@ export default function AboutMeSection() {
 
           {/* Contact Buttons */}
           <div className="flex gap-4 mt-8 flex-wrap">
-            <div className="flex items-center gap-2 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-              <PhoneCall className="text-indigo-600 w-5 h-5" />
-              <div>
-                <p className="font-semibold text-xs sm:text-sm text-gray-900">24/7 Call Me</p>
-                <p className="text-gray-600 text-[11px] sm:text-xs">+8801845238826</p>
-              </div>
+            <div>
+              <a
+                href="tel:+8801845238826"
+                className="flex items-center gap-2 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+              >
+                <PhoneCall className="text-indigo-600 w-5 h-5" />
+                <div>
+                  <p className="font-semibold text-xs sm:text-sm text-gray-900">
+                    24/7 Call Me
+                  </p>
+                  <p className="text-gray-600 text-[11px] sm:text-xs">
+                    +8801845238826
+                  </p>
+                </div>
+              </a>
             </div>
-            <div className="flex items-center gap-2 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300">
-              <Mail className="text-indigo-600 w-5 h-5" />
-              <div>
-                <p className="font-semibold text-xs sm:text-sm text-gray-900">Mail Me</p>
-                <p className="text-gray-600 text-[11px] sm:text-xs">tanvir03.2001@gmail.com</p>
-              </div>
+            <div>
+              <a
+                href="mailto:tanvir03.2001@gmail.com"
+                className="flex items-center gap-2 bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition duration-300"
+              >
+                <Mail className="text-indigo-600 w-5 h-5" />
+                <div>
+                  <p className="font-semibold text-xs sm:text-sm text-gray-900">
+                    Mail Me
+                  </p>
+                  <p className="text-gray-600 text-[11px] sm:text-xs">
+                    tanvir03.2001@gmail.com
+                  </p>
+                </div>
+              </a>
             </div>
           </div>
 
