@@ -3,6 +3,7 @@
 
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
@@ -43,13 +44,15 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05 }}
               className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md font-medium transition"
             >
-              Contact Me
+              <Link href="#contact">Contact Me</Link>
             </motion.button>
             <motion.button
               whileHover={{ scale: 1.05 }}
               className="bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 px-6 py-2 rounded-md font-medium transition"
             >
-              Download CV
+              <a href="/Recommendation.pdf" download>
+                Download CV
+              </a>
             </motion.button>
           </div>
         </motion.div>

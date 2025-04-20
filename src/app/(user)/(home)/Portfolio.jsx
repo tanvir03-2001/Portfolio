@@ -11,30 +11,45 @@ const allProjects = [
     category: "Mobile App",
     image: "https://i.ibb.co.com/rR0ySh4z/Project-Management.jpg",
     likes: 25,
+    tech: ["Figma", "UI/UX"],
+    github: "https://github.com/yourusername/mobile-app-design",
+    live: "https://yourdomain.com/mobile-app-design",
   },
   {
     title: "Dashboard UI Design in Figma",
     category: "Dashboard",
     image: "https://i.ibb.co.com/rR0ySh4z/Project-Management.jpg",
     likes: 45,
+    tech: ["Figma", "Dashboard"],
+    github: "https://github.com/yourusername/dashboard-ui",
+    live: "https://yourdomain.com/dashboard-ui",
   },
   {
     title: "Website Landing Page",
     category: "Website",
     image: "https://i.ibb.co.com/rR0ySh4z/Project-Management.jpg",
     likes: 75,
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/yourusername/landing-page",
+    live: "https://yourdomain.com/landing-page",
   },
   {
     title: "Responsive HTML CSS Layout",
     category: "HTML/CSS",
     image: "https://i.ibb.co.com/rR0ySh4z/Project-Management.jpg",
     likes: 55,
+    tech: ["HTML", "CSS"],
+    github: "https://github.com/yourusername/responsive-layout",
+    live: "https://yourdomain.com/responsive-layout",
   },
   {
     title: "Another Mobile App UI",
     category: "Mobile App",
     image: "https://i.ibb.co.com/rR0ySh4z/Project-Management.jpg",
     likes: 60,
+    tech: ["Figma", "Prototyping"],
+    github: "https://github.com/yourusername/another-mobile-ui",
+    live: "https://yourdomain.com/another-mobile-ui",
   },
 ];
 
@@ -124,6 +139,38 @@ export default function Portfolio() {
                   <h4 className="font-semibold text-base sm:text-lg leading-tight text-gray-800">
                     {project.title}
                   </h4>
+
+                  {/* Tech Stack */}
+                  <div className="mt-2 flex flex-wrap gap-1">
+                    {project.tech.map((item, idx) => (
+                      <span
+                        key={idx}
+                        className="bg-indigo-50 text-indigo-600 text-xs font-medium px-2 py-0.5 rounded-full"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* GitHub & Live Links */}
+                  <div className="mt-4 flex gap-4">
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-indigo-600 font-medium hover:underline"
+                    >
+                      GitHub
+                    </a>
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-green-600 font-medium hover:underline"
+                    >
+                      Live Site
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             );

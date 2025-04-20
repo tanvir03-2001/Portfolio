@@ -34,10 +34,10 @@ export default function SkillsMarquee() {
   }, []);
 
   return (
-    <div className="bg-white py-10 overflow-hidden">
+    <div className="bg-white py-6 md:py-10 overflow-hidden">
       <div className="relative w-full">
         <div
-          className="flex gap-16 animate-none will-change-transform"
+          className="flex gap-8 md:gap-16 animate-none will-change-transform"
           ref={trackRef}
           style={{
             whiteSpace: "nowrap",
@@ -49,7 +49,7 @@ export default function SkillsMarquee() {
                 src={skill.src}
                 alt={skill.name}
                 title={skill.name}
-                className="w-16 h-16 md:w-20 md:h-20 object-contain transition duration-300"
+                className="w-10 h-10 md:w-20 md:h-20 object-contain transition duration-300"
               />
             </div>
           ))}

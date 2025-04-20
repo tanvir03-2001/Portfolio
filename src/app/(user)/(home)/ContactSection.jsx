@@ -27,7 +27,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-gradient-to-b from-[#f8fafc] to-[#e2e8f0] text-sm md:text-base">
+    <section id="contact" className="bg-gradient-to-b from-[#f8fafc] to-[#e2e8f0] text-sm md:text-base">
       <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-20">
         {/* Header */}
         <div className="text-center mb-14 max-w-2xl mx-auto">
